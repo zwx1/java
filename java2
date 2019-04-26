@@ -1,0 +1,72 @@
+class Demo1
+{
+	public static void main(String[] args) 
+	{
+		//输出一句话Hello World!这是单行注释
+		/*
+		这是多行注释
+		*/
+		/**
+			文档注释
+		*/
+		System.out.println("Hello World!");//输出字符串常量
+		System.out.println('H');//输出单个字符
+		System.out.println(123);//输出整数
+		System.out.println(123.456);//输出小数
+		System.out.println(false);//输出布尔类型的值
+	}
+}
+
+
+class Demo2 
+{
+	public static void main(String[] args) 
+	{
+		//变量：说白了 就是存储常量的  可变的常量
+		int i=123;//int:数据类型  i变量名 =赋值
+		i=456;
+		int x=11,y=22,z=33;
+		
+		//byte b=128;
+		short s=128;
+		//float为单精度 精确到小数点后4位  必须加F
+		float f=123.123456789123456789F;
+		//double为双精度 精确到小数点后13位
+		double d=123.123456789123499999;
+		//long作为一个比较特殊的整数类型 他可以接收大整数
+		//但是如果该整数 超过了int能存储的最大范围  必须加l/L
+		//总结：long值 加l一定不会错  不加l可能会出错
+		long l=123456789l;
+		System.out.println(f);
+		System.out.println(d);
+		System.out.println(l);
+		//分析：在java中  整数类型的值 默认是int 
+				//小数类型默认是double
+
+		boolean b=true;
+		//println 和 print的区别 println具有换行功能
+		System.out.print(b+"\n");
+		char c='@';
+		int xx=c;
+		System.out.print(c);
+	}
+}
+
+
+class Demo3 
+{
+	public static void main(String[] args) 
+	{
+		byte b=123;
+		int i=b;//把变量b中的值赋值给了变量i
+		//小类型的值 可以直接赋值给大类型  自动转换
+		//java不允许大类型的值直接赋值给小类型报错
+		//可以强制类型转换byte by=(byte)in;
+		//但是 java不保证该值的准确
+		int in=45678;
+		byte by=(byte)in;
+		double d=in;
+		System.out.println(d);
+	}
+}
+
